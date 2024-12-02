@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void generateSubsets(int arr[],int size, vector<int>& subset, int index){
+    
+    if(index==size){
+        cout << "{ ";
+        for(int a:subset){
+            cout << a << " ";
+        }
+        cout << "}" << endl;
+        return;
+    }
+
+    generateSubsets(arr,size, subset, index + 1);
+    subset.push_back(arr[index]);
+    generateSubsets(arr,size, subset, index + 1);
+    subset.pop_back();
+}
+
+int main(){
+    int arr[] = {1, 2, 3, 4};
+    vector<int> subset;
+    int size = sizeof(arr)/sizeof(arr[0]);
+    generateSubsets(arr,size, subset, 0);
+    return 0;
+}
