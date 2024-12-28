@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+void permutation(vector<int> arr){
+    sort(arr.begin(), arr.end());
+
+    do{
+        for(int i: arr){
+            cout << i << " ";
+        }
+        cout << endl;
+
+    } while(next_permutation(arr.begin(), arr.end()));
+}
+
+
+int main(){
+
+    vector<int> arr = {1, 2, 3, 4};
+    permutation(arr);
+
+    return 0;
+}
