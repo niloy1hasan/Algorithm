@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+void permutation(int arr[], int start, int len){
+    
+    if(start == len-1){
+        for(int i=0; i<len; i++){
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+        return;
+    } 
+
+    for(int i=start; i<len; i++){
+        swap(arr[start], arr[i]);
+        permutation(arr, start + 1, len);
+        swap(arr[start], arr[i]);
+    }
+}
+
+int main(){
+
+    int arr[] = {1,2,3};
+    int len = sizeof(arr)/sizeof(arr[0]);
+
+    permutation(arr, 0, len);
+
+    return 0;
+}
