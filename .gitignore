@@ -1,0 +1,38 @@
+# Ignore output directory
+output/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore build files
+*.o
+*.obj
+*.exe
+*.out
+*.dll
+*.so
+*.a
+*.lib
+
+# Ignore compiled binary files
+*.class
+*.jar
+*.pyc
+*.pyo
+*.pdb
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# Ignore CMake build directory
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore debug and release directories (if using IDEs)
+Debug/
+Release/
+ 
