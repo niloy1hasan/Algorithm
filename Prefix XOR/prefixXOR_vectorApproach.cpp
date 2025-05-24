@@ -23,7 +23,16 @@ int main(){
         cout << i << " ";
     }
 
+    cout << "\n\n";
 
+    cout << "find xor of a range from the array\n";
+    int left, right;
+    cout << "left range: ";
+    cin >> left;
+    cout << "right range: ";
+    cin >> right;
+
+    cout << (prefixXor[right-1] ^ ((left>1)? prefixXor[left-2]: 0));
 
     return 0;
 }
