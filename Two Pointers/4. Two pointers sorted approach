@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void twoPointersSum(vector<int> arr, int target){
+
+    int n = arr.size();
+    sort(arr.begin(), arr.end());
+
+    int left = 0, right = n-1;
+    bool found = false;
+    while(left<right){
+        if(arr[left]+arr[right]==target){
+            found = true;
+            cout << "found! " << arr[left] << " + " << arr[right] << " = " << target << endl;
+            return;
+        }
+        else if(arr[left]+arr[right]<target)
+            left++;
+        else if(arr[left]+arr[right]>target)
+            right--;
+    }
+
+    if(!found)
+    cout << "Not found two numbers summation equal to the target value";
+}
+
+int main(){
+
+    vector<int> arr = {15, 72, 39, 84, 23, 67, 51, 96, 12, 48, 63, 90, 37, 74, 29, 56, 81, 19, 44, 70, 26, 85, 34, 49, 60, 88, 41, 53, 98, 32};
+
+    int target;
+    cin >> target;
+
+    twoPointersSum(arr, target);
+
+    return 0;
+}
