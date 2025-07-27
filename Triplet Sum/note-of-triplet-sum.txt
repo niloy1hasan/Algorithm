@@ -1,0 +1,21 @@
+
+
+--------- triplet sum or three sum ---------
+
+this is not any special type algorithm, this is a type of problem,
+that need to solve through two pointers or hashmap
+
+problem description:
+give an array and a target value,
+need to find target value by sum of three different indexed values
+
+example:
+
+given, array = -1, 1, 2, 3, 5, 6, 8, 11
+and target = 6
+
+so, can get 6 => [1, 2, 3] and [-1, 1, 6]
+
+
+
+
